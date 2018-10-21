@@ -2,9 +2,9 @@
 
 namespace Sepia\Uploader;
 
-use Sepia\Http\Response;
+use Sepia\Http\JsonResponse;
 
-class UploadResponse extends Response
+class UploadResponse extends JsonResponse
 {
     /** @var \Model_Media */
     private $media;
@@ -25,7 +25,7 @@ class UploadResponse extends Response
     public function sendContent()
     {
         echo \JSON::encode([
-            'result' => true,
+            'success' => true,
             'media' => [
                 'id' => $this->media->getId(),
                 'filename' => $this->media->getPath(),
