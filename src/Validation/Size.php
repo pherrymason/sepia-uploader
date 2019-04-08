@@ -22,7 +22,7 @@ class Size implements UploadConstraintValidator
         }
 
         if ($fileInfo->size() > $this->maximumSize) {
-            throw new ValidationException('File exceeds maximum allowed size.');
+            throw new ValidationException('File exceeds maximum allowed size: '.$this->maximumSize);
         }
     }
 
