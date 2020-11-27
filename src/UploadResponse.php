@@ -24,7 +24,7 @@ class UploadResponse extends JsonResponse
      */
     public function sendContent()
     {
-        echo \JSON::encode([
+        echo \Json::encode([
             'success' => true,
             'media' => [
                 'id' => $this->media->getId(),
