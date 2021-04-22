@@ -20,7 +20,11 @@ class Uploader
      * @throws UploadException
      * @throws Exception\ValidationException
      */
-    public function upload(Storage $storageUploader, FileInfo $fileInfo, ?string $destinyPath, ?string $newFilename = null): UploadedFileInfo
+    public function upload(
+        Storage $storageUploader,
+        FileInfo $fileInfo,
+        ?string $destinyPath,
+        ?string $newFilename = null): UploadedFileInfo
     {
         $this->validate($fileInfo);
 
